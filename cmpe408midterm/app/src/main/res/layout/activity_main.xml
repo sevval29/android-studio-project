@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+      <EditText
+          android:id="@+id/editrownumbers"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="2"
+          android:hint="input row numbers"
+          android:inputType="number"
+          android:textSize="@dimen/Textsize"></EditText>
+
+
+      <EditText
+          android:id="@+id/editcolumnnumbers"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="2"
+          android:hint="input column numbers"
+          android:inputType="number"
+          android:textSize="@dimen/Textsize"></EditText>
+
+      <TextView
+
+          android:id="@+id/result"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:background="#D8091A"
+          android:hint="result"
+          android:layout_weight="1"
+          android:textSize="@dimen/Textsize"
+
+          ></TextView>
+  </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btncreate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_margin="@dimen/buttonMargin"
+            android:layout_weight="1"
+
+            android:text="create"
+            android:textSize="@dimen/buttonTextsize" />
+
+        <Button
+            android:id="@+id/btncalculate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="calculate"
+            android:textSize="@dimen/buttonTextsize" />
+
+        <Button
+            android:id="@+id/btnreset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="reset"
+            android:textSize="@dimen/buttonTextsize" />
+
+        <Button
+            android:id="@+id/btnexit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="exit"
+            android:textSize="@dimen/buttonTextsize" />
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/layout"
+        android:layout_height="match_parent"
+        android:scrollbars="horizontal|vertical"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dip"
+        android:scrollbarStyle="outsideInset"
+        android:fillViewport="true">
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalView"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal|vertical"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dip">
+
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+            </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+
+</LinearLayout>
